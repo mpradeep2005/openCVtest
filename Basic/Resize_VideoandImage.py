@@ -1,7 +1,7 @@
 import cv2 as cv
 
 
-cap=cv.VideoCapture("E:/Movies/Python Tutorial .mp4")
+cap=cv.VideoCapture("E:/openCVtest/res/186326-877653666_small.mp4")
 
 def rescaleFrame(frame,scale=0.5):
     height=int(frame.shape[0]*scale)
