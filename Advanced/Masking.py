@@ -9,7 +9,10 @@ cv.imshow("balnk",blank)
 
 Rectangle=cv.rectangle(blank.copy(),(100,100),(400,400),250,-1)
 circle=cv.circle(blank.copy(),(350,200),100,250,-1)
-mask_img=cv.bitwise_and(Rectangle,circle)
+
+"""" for the masking we use Bitwise operator"""
+mask_img=cv.bitwise_or(Rectangle,circle)
+
 """ Mask the img,img with the mask"""
 masked=cv.bitwise_and(img,img,mask=mask_img)
 cv.imshow("masked",masked)
